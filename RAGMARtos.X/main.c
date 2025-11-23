@@ -1,19 +1,24 @@
 #include "RAGMARtos.h"
 
+
 void blink_blue(){
-    PORTB ^=(1<<0);
+    uint8_t valor = (1<<0);
+    call_driver(DRVR_LED, LED_TOGGLE,&valor);
 }
 
 void blink_red(){
-    PORTB ^=(1<<1);
+    uint8_t valor = (1<<1);
+    call_driver(DRVR_LED, LED_TOGGLE,&valor);
 }
 
 void blink_green(){
-    PORTB ^=(1<<2);
+    uint8_t valor = (1<<2);
+    call_driver(DRVR_LED, LED_TOGGLE,&valor);
 }
 
 void blink_yellow(){
-    PORTB ^=(1<<3);
+    uint8_t valor = (1<<3);
+    call_driver(DRVR_LED, LED_TOGGLE,&valor);
 }
 
 void button_yellow(){
@@ -21,21 +26,16 @@ void button_yellow(){
 }
 
 void button_green(){
-    PORTB = (PINC&(1<<1))?PORTB|(1<<2):PORTB&(~(1<<2));
+    uint8_t valor = (1<<2);
+    if(PINC&(1<<1)){
+        call_driver(DRVR_LED, LED_ON,&valor);
+    }else{
+        call_driver(DRVR_LED, LED_OFF,&valor);
+    }
 }
 int main(void){
-    DDRB |= (1<<0);
-    DDRB |= (1<<1);
-    DDRB |= (1<<2);
-    DDRB |= (1<<3);
-    
-    DDRC = 0x00;
-    
     create_kernell();
-    kernell_add_process(blink_blue, 1000, true);
-    kernell_add_process(blink_red, 500, true);
-    kernell_add_process(blink_yellow, 100, true);
-    kernell_add_process(button_green, 5, true);
+    init_driver(DRVR_LCD,NULL);
     while(1){
         kernell_init();
     }

@@ -17,6 +17,7 @@ struct kernell{
 
 struct kernell* kernell = NULL;
 struct kernell* new_kernell(){
+    load_controller();
 	struct kernell* this = (struct kernell*) malloc(sizeof(struct kernell));
 	this->buffer_start = NULL;
 	this->buffer_end = NULL;

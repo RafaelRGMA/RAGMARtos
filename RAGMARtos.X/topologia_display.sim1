@@ -1,0 +1,27 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Hd44780" CircId="Hd44780-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-124,-148" rotation="0" hflip="1" vflip="1" label="Hd44780-1" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="16" />
+
+<item itemtype="Ground" CircId="Ground-22" mainComp="false" Show_id="false" Show_Val="false" Pos="-100,48" rotation="0" hflip="1" vflip="1" label="Ground-22" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-29" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-472,-32" rotation="0" hflip="1" vflip="1" label="Voltage Source-29" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="2.04541 V" MaxValue="5.001 V" MinValue="0 V" />
+
+<item itemtype="Subcircuit" CircId="Nano-30" mainComp="false" Show_id="true" Show_Val="false" Pos="-180,20" rotation="0" hflip="-1" vflip="-1" label="Nano-30" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" Program="dist/default/production/DisplayLIB.X.production.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Connector" uid="Connector-60" startpinid="Ground-22-Gnd" endpinid="Hd44780-1-PinRW" pointList="-100,32,-100,-140" />
+
+<item itemtype="Connector" uid="Connector-73" startpinid="Hd44780-1-dataPin4" endpinid="Nano-30-8" pointList="-52,-140,-52,-76,-188,-76" />
+
+<item itemtype="Connector" uid="Connector-74" startpinid="Hd44780-1-dataPin5" endpinid="Nano-30-9" pointList="-44,-140,-44,-84,-188,-84" />
+
+<item itemtype="Connector" uid="Connector-75" startpinid="Hd44780-1-dataPin6" endpinid="Nano-30-10" pointList="-36,-140,-36,-92,-188,-92" />
+
+<item itemtype="Connector" uid="Connector-76" startpinid="Hd44780-1-dataPin7" endpinid="Nano-30-11" pointList="-28,-140,-28,-100,-188,-100" />
+
+<item itemtype="Connector" uid="Connector-77" startpinid="Hd44780-1-PinRS" endpinid="Nano-30-13" pointList="-108,-140,-272,-140,-272,-108,-236,-108" />
+
+<item itemtype="Connector" uid="Connector-78" startpinid="Nano-30-12" endpinid="Hd44780-1-PinEn" pointList="-188,-108,-92,-108,-92,-140" />
+
+</circuit>

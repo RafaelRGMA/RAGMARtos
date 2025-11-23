@@ -2,13 +2,8 @@
 #define AVRTOS
 
 
-#define F_CPU 16000000
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <util/delay.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdbool.h>
+#include "GlobalIncludes.h"
+#include "DriverController.h"
 
 typedef struct process Process;
 typedef void(*task)();
