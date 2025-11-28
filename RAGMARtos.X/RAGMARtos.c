@@ -3,76 +3,82 @@
 
 struct process{
 	task routine;
+    void* param;
 	int period;
 	int remaining_time;
-	bool reschedule;
-	struct process* next;
+    uint8_t priority;
+	bool suspended;
 };
 
 struct kernell{
-	Process* buffer_start;
-	Process* buffer_end;
-	Process* execute;
+    uint8_t buffer_length;
+    uint8_t buffer_max_length;
+    struct process* buffer;
+	struct process* execute;
 };
+bool kernell_created = false;
+struct kernell kernell;
 
-struct kernell* kernell = NULL;
-struct kernell* new_kernell(){
+void load_kernell(uint8_t buffer_max_length){
     load_controller();
-	struct kernell* this = (struct kernell*) malloc(sizeof(struct kernell));
-	this->buffer_start = NULL;
-	this->buffer_end = NULL;
-	this->execute = NULL;
-	return this;
+    struct process buffer[buffer_max_length];
+	kernell.buffer_max_length = buffer_max_length;
+    kernell.buffer_length = 0;
+    kernell.buffer = buffer;
+	kernell.execute = NULL;
+    kernell_created = true;
 }
 
-struct process* new_process(task routine, int period, bool reschedule){
-	struct process* this = (struct process*) malloc(sizeof(struct process));
-	this->routine = routine;
-	this->period = period;
-	this->reschedule = reschedule;
-	this->remaining_time = period;
-	this->next = NULL;
-	return this;
-}
+
 
 void scheduler_process_selection(){ //O(n)
-	//Este algoritmo ainda deverá ser revisado
-	struct process* indexable = kernell->buffer_start;
-	kernell->execute = NULL;
-	while(indexable != NULL){
-		if(indexable->remaining_time <= 0){
-			kernell->execute = indexable;
-			return;
-		}
-		indexable = indexable->next;
-	}
+    kernell.execute = NULL;
+	for(int i = 0;i < kernell.buffer_length; i++){
+        if(kernell.buffer[i].remaining_time <= 0 && (!kernell.buffer[i].suspended)){
+            kernell.execute = ((kernell.execute == NULL)||(kernell.execute->priority < kernell.buffer[i].priority))?
+                &kernell.buffer[i]:kernell.execute;
+        }
+    }
 }
 
 void schedule_decrement_time(){ //O(n)
-	struct process* indexable = kernell->buffer_start;
-	while(indexable != NULL){
-		indexable->remaining_time--;
-		indexable = indexable->next;
-	}
+	for(int i = 0;i < kernell.buffer_length; i++){
+        kernell.buffer[i].remaining_time--;
+    }
 }
 
 //PUBLIC
-void create_kernell(){
-	if(kernell == NULL){
-		kernell = new_kernell();
-	}
+void create_kernell(uint8_t max_process_buffer_length){
+    if(!kernell_created){
+        load_kernell(max_process_buffer_length);
+        kernell_created = true;
+    } 
 }
 
-void kernell_add_process(task routine, int period, bool reschedule){
-	struct process* process = new_process(routine, period, reschedule);
-	if(kernell->buffer_start == NULL){
-		kernell->buffer_start = process;
-		kernell->buffer_end = process;
-		kernell->execute = process;
-	}else{
-		kernell->buffer_end->next = process;
-		kernell->buffer_end = process;
-	}
+void set_process_suspended(uint8_t process_buffer_index){
+    if(process_buffer_index < kernell.buffer_max_length){
+        kernell.buffer[process_buffer_index].suspended = true;
+    }
+}
+
+void set_process_ready(uint8_t process_buffer_index){
+    if(process_buffer_index < kernell.buffer_max_length){
+        kernell.buffer[process_buffer_index].suspended = false;
+    }
+}
+
+void kernell_add_process(task routine,void* param, uint8_t priority, int period, bool suspended){
+	if(kernell.buffer_length < kernell.buffer_max_length){
+        struct process process;
+        process.routine = routine;
+        process.param = param;
+        process.period = period;
+        process.suspended = suspended;
+        process.remaining_time = period;
+        process.priority = priority;
+        kernell.buffer[kernell.buffer_length] = process;
+        kernell.buffer_length++;
+    }
 }
 
 void kernell_init(){
@@ -83,28 +89,13 @@ void kernell_init(){
 	sei();
 	while(1){
 		scheduler_process_selection();
-		if(kernell->execute != NULL){
-			kernell->execute->routine();
-			kernell->execute->remaining_time = kernell->execute->period;
+		if(kernell.execute != NULL){
+			kernell.execute->routine(kernell.execute->param);
+			kernell.execute->remaining_time = kernell.execute->period;
 		}
 	}
 }
 
-void terminate_kernell(){
-	struct kernell** object = &kernell;
-	struct process* before = (*object)->buffer_start;
-	struct process* after = (*object)->buffer_start->next;
-	while(after != NULL){
-		free(before);
-		before = NULL;
-		before = after;
-		after = after->next;
-	}
-	free(before);
-	before = NULL;
-	free(*object);
-	*object = NULL;
-}
 
 ISR(TIMER1_COMPA_vect){
     schedule_decrement_time();

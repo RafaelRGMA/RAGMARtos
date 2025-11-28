@@ -1,17 +1,18 @@
-#ifndef AVRTOS
-#define AVRTOS
+#ifndef RAGMARTOS
+#define RAGMARTOS
 
 
 #include "GlobalIncludes.h"
 #include "DriverController.h"
 
-typedef struct process Process;
-typedef void(*task)();
+typedef void(*task)(void* param);
 
-void create_kernell();
-void kernell_add_process(task routine, int period, bool reschedule);
+void create_kernell(uint8_t max_process_buffer_length);
+void kernell_add_process(task routine,void* param, uint8_t priority, int period, bool suspended);
 void kernell_init();
-void terminate_kernell();
+
+void set_process_suspended(uint8_t process_buffer_index);
+void set_process_ready(uint8_t process_buffer_index);
 
 
 

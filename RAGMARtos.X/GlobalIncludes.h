@@ -8,12 +8,12 @@
 #ifndef GLOBALINCLUDES
 #define	GLOBALINCLUDES
 
+#define NULL 0
 #define F_CPU 16000000
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
-#include <stdlib.h>
-#include <stdint.h>
+
 #include <stdbool.h>
 
 #endif	
