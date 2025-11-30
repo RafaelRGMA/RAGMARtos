@@ -1,6 +1,6 @@
-build/default/production/DriverController.o.d \
- build/default/production/DriverController.o: DriverController.c \
- DriverController.h Diver_template.h GlobalIncludes.h \
+build/default/production/DriverCounter16.o.d \
+ build/default/production/DriverCounter16.o: DriverCounter16.c \
+ DriverCounter16.h Diver_template.h GlobalIncludes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -17,9 +17,9 @@ build/default/production/DriverController.o.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- DriverLed.h DriverLCD.h DriverCounter16.h RAGMARtos.h
+ RAGMARtos.h DriverController.h DriverLed.h DriverLCD.h
 
-DriverController.h:
+DriverCounter16.h:
 
 Diver_template.h:
 
@@ -57,10 +57,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
 
+RAGMARtos.h:
+
+DriverController.h:
+
 DriverLed.h:
 
 DriverLCD.h:
-
-DriverCounter16.h:
-
-RAGMARtos.h:

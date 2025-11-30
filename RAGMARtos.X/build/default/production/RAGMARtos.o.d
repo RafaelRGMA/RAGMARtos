@@ -17,7 +17,8 @@ build/default/production/RAGMARtos.o.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- DriverController.h Diver_template.h DriverLed.h DriverLCD.h
+ DriverController.h Diver_template.h DriverLed.h DriverLCD.h \
+ DriverCounter16.h
 
 RAGMARtos.h:
 
@@ -62,3 +63,5 @@ Diver_template.h:
 DriverLed.h:
 
 DriverLCD.h:
+
+DriverCounter16.h:

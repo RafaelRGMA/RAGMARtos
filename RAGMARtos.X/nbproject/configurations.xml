@@ -10,6 +10,7 @@
       <itemPath>DriverController.h</itemPath>
       <itemPath>DriverLed.h</itemPath>
       <itemPath>DriverLCD.h</itemPath>
+      <itemPath>DriverCounter16.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +24,7 @@
       <itemPath>DriverController.c</itemPath>
       <itemPath>DriverLed.c</itemPath>
       <itemPath>DriverLCD.c</itemPath>
+      <itemPath>DriverCounter16.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

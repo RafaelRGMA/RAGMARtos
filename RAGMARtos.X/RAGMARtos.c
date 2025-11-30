@@ -43,7 +43,7 @@ void scheduler_process_selection(){ //O(n)
 
 void schedule_decrement_time(){ //O(n)
 	for(int i = 0;i < kernell.buffer_length; i++){
-        kernell.buffer[i].remaining_time--;
+        kernell.buffer[i].remaining_time -= (kernell.buffer[i].suspended)?0:1;
     }
 }
 
@@ -68,7 +68,7 @@ void set_process_ready(uint8_t process_buffer_index){
 }
 
 void kernell_add_process(task routine,void* param, uint8_t priority, int period, bool suspended){
-	if(kernell.buffer_length < kernell.buffer_max_length){
+	if(kernell.buffer_length <= kernell.buffer_max_length){
         struct process process;
         process.routine = routine;
         process.param = param;
@@ -82,11 +82,11 @@ void kernell_add_process(task routine,void* param, uint8_t priority, int period,
 }
 
 void kernell_init(){
-    TIMSK1 = 0x02; //Timer/Counter1, Output Compare A Match Interrupt Enable
-    OCR1AL = 0xFA; //2500 counter * 64=> 10ms
-    //OCR1AH = 0x09;
-    TCCR1B = 0b00001011; //prescaler 1:64, modo CTC
-	sei();
+    TIMSK0 = 0x02; //Timer/Counter1, Output Compare A Match Interrupt Enable
+    OCR0A = 0xF9; //249 counter * 64=> 1ms (valor corrigido para maior exatidão)
+    TCCR0A = 0x02;//modo CTC
+    sei();
+    TCCR0B = 0b00000011; //prescaler 1:64
 	while(1){
 		scheduler_process_selection();
 		if(kernell.execute != NULL){
@@ -96,7 +96,6 @@ void kernell_init(){
 	}
 }
 
-
-ISR(TIMER1_COMPA_vect){
+ISR(TIMER0_COMPA_vect){
     schedule_decrement_time();
 }

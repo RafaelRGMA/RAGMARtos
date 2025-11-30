@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c RAGMARtos.c DriverController.c DriverLed.c DriverLCD.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c RAGMARtos.c DriverController.c DriverLed.c DriverLCD.c DriverCounter16.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RAGMARtos.o ${OBJECTDIR}/DriverController.o ${OBJECTDIR}/DriverLed.o ${OBJECTDIR}/DriverLCD.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RAGMARtos.o.d ${OBJECTDIR}/DriverController.o.d ${OBJECTDIR}/DriverLed.o.d ${OBJECTDIR}/DriverLCD.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/RAGMARtos.o ${OBJECTDIR}/DriverController.o ${OBJECTDIR}/DriverLed.o ${OBJECTDIR}/DriverLCD.o ${OBJECTDIR}/DriverCounter16.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/RAGMARtos.o.d ${OBJECTDIR}/DriverController.o.d ${OBJECTDIR}/DriverLed.o.d ${OBJECTDIR}/DriverLCD.o.d ${OBJECTDIR}/DriverCounter16.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RAGMARtos.o ${OBJECTDIR}/DriverController.o ${OBJECTDIR}/DriverLed.o ${OBJECTDIR}/DriverLCD.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/RAGMARtos.o ${OBJECTDIR}/DriverController.o ${OBJECTDIR}/DriverLed.o ${OBJECTDIR}/DriverLCD.o ${OBJECTDIR}/DriverCounter16.o
 
 # Source Files
-SOURCEFILES=main.c RAGMARtos.c DriverController.c DriverLed.c DriverLCD.c
+SOURCEFILES=main.c RAGMARtos.c DriverController.c DriverLed.c DriverLCD.c DriverCounter16.c
 
 
 CFLAGS=
@@ -135,6 +135,12 @@ ${OBJECTDIR}/DriverLCD.o: DriverLCD.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/DriverLCD.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega328p  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\gcc\dev\atmega328p" -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/DriverLCD.o.d" -MT "${OBJECTDIR}/DriverLCD.o.d" -MT ${OBJECTDIR}/DriverLCD.o  -o ${OBJECTDIR}/DriverLCD.o DriverLCD.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/DriverCounter16.o: DriverCounter16.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DriverCounter16.o.d 
+	@${RM} ${OBJECTDIR}/DriverCounter16.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega328p  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\gcc\dev\atmega328p" -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/DriverCounter16.o.d" -MT "${OBJECTDIR}/DriverCounter16.o.d" -MT ${OBJECTDIR}/DriverCounter16.o  -o ${OBJECTDIR}/DriverCounter16.o DriverCounter16.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -165,6 +171,12 @@ ${OBJECTDIR}/DriverLCD.o: DriverLCD.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/DriverLCD.o.d 
 	@${RM} ${OBJECTDIR}/DriverLCD.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega328p  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\gcc\dev\atmega328p"  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/DriverLCD.o.d" -MT "${OBJECTDIR}/DriverLCD.o.d" -MT ${OBJECTDIR}/DriverLCD.o  -o ${OBJECTDIR}/DriverLCD.o DriverLCD.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/DriverCounter16.o: DriverCounter16.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DriverCounter16.o.d 
+	@${RM} ${OBJECTDIR}/DriverCounter16.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega328p  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATmega_DFP\2.0.2\gcc\dev\atmega328p"  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/DriverCounter16.o.d" -MT "${OBJECTDIR}/DriverCounter16.o.d" -MT ${OBJECTDIR}/DriverCounter16.o  -o ${OBJECTDIR}/DriverCounter16.o DriverCounter16.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 
