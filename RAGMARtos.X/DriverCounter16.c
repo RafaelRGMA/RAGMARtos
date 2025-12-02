@@ -6,7 +6,7 @@ struct isr_process{
 };
 
 driver counter16;
-procedure list_methods[END_COUNTER16];
+procedure list_COUNTER16[END_COUNTER16];
 struct isr_process job;
 
 uint8_t counter16_init(void* top_value){
@@ -30,10 +30,10 @@ uint8_t set_ISR_thread_param(void* param){
 }
 
 driver* get_counter16_driver(){
-    list_methods[ISR_THREAD] = set_ISR_thread;
-    list_methods[ISR_PARAM] = set_ISR_thread_param;
+    list_COUNTER16[ISR_THREAD] = set_ISR_thread;
+    list_COUNTER16[ISR_PARAM] = set_ISR_thread_param;
     counter16.driver_init = counter16_init;
-    counter16.driver_methods = list_methods;
+    counter16.driver_methods = list_COUNTER16;
     return &counter16;
 }
 

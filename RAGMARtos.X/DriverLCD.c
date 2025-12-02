@@ -1,7 +1,7 @@
 #include "DriverLCD.h"
 
 driver drvr_lcd;
-procedure list_methods[END_LCD];
+procedure list_LCD[END_LCD];
 
 uint8_t format_data(uint8_t raw_data){
     PORTB  &= ~EN;
@@ -35,7 +35,7 @@ void function_set(){
     send();
 }
 
-void display_setup_item(){
+uint8_t display_setup_item(){
     uint8_t raw_data = 0b00001111;
     PORTB &= ~RS;
     
@@ -47,7 +47,24 @@ void display_setup_item(){
     send();
     PORTB = format_data(raw_data);
     send();
+    return 0;
 }
+
+uint8_t print_char(void* byte){
+    uint8_t raw_data = *((uint8_t*)byte);
+    PORTB |= RS;
+      /*
+     * Inverte-se a palavra do dado para enviar o nibble mais significativo
+     * pelo nibble menos significativo da porta de dados
+     */
+    PORTB = format_data((raw_data<<4)|(raw_data>>4));
+    send();
+    PORTB = format_data(raw_data);
+    send();
+    return 0;
+}
+
+
 
 uint8_t LCD_init(){
     DDRB |= 0b00111111;
@@ -61,7 +78,9 @@ uint8_t LCD_init(){
 
 
 driver* get_lcd_driver(){
+    list_LCD[SETUP_ITEM] = display_setup_item;
+    list_LCD[PRINT_CHAR] = print_char;
     drvr_lcd.driver_init = LCD_init;
-    drvr_lcd.driver_methods = list_methods;
+    drvr_lcd.driver_methods = list_LCD;
     return &drvr_lcd;
 }

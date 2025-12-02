@@ -18,10 +18,11 @@ struct kernell{
 };
 bool kernell_created = false;
 struct kernell kernell;
+struct process* buffer;
 
 void load_kernell(uint8_t buffer_max_length){
     load_controller();
-    struct process buffer[buffer_max_length];
+    buffer = (struct process*) malloc(buffer_max_length*sizeof(struct process));
 	kernell.buffer_max_length = buffer_max_length;
     kernell.buffer_length = 0;
     kernell.buffer = buffer;
@@ -68,7 +69,7 @@ void set_process_ready(uint8_t process_buffer_index){
 }
 
 void kernell_add_process(task routine,void* param, uint8_t priority, int period, bool suspended){
-	if(kernell.buffer_length <= kernell.buffer_max_length){
+	if(kernell.buffer_length < kernell.buffer_max_length){
         struct process process;
         process.routine = routine;
         process.param = param;

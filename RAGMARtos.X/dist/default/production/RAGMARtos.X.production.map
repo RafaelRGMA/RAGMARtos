@@ -1,32 +1,44 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                              C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
+                              C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               build/default/production/main.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               build/default/production/RAGMARtos.o (__do_clear_bss)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                              build/default/production/RAGMARtos.o (malloc)
 
 Allocating common symbols
 Common symbol       size              file
 
 drvr_led            0x4               build/default/production/DriverLed.o
+__brkval            0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
 kernell             0x6               build/default/production/RAGMARtos.o
 drvr_lcd            0x4               build/default/production/DriverLCD.o
 counter16           0x4               build/default/production/DriverCounter16.o
-list_methods        0x6               build/default/production/DriverLed.o
+buffer              0x2               build/default/production/RAGMARtos.o
+list_LCD            0x4               build/default/production/DriverLCD.o
+list_LED            0x6               build/default/production/DriverLed.o
 drvrs_list          0x6               build/default/production/DriverController.o
+__flp               0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+list_COUNTER16      0x4               build/default/production/DriverCounter16.o
 job                 0x4               build/default/production/DriverCounter16.o
 
 Discarded input sections
 
- .data          0x00000000        0x0 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .bss           0x00000000        0x0 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .data          0x00000000        0x0 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .bss           0x00000000        0x0 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .text          0x00000000        0x0 build/default/production/main.o
  .data          0x00000000        0x0 build/default/production/main.o
  .bss           0x00000000        0x0 build/default/production/main.o
- .text.button_purple
-                0x00000000       0x2c build/default/production/main.o
+ .text.blink    0x00000000        0xc build/default/production/main.o
+ .text.button   0x00000000       0x28 build/default/production/main.o
+ .data.purple   0x00000000        0x1 build/default/production/main.o
+ .data.yellow   0x00000000        0x1 build/default/production/main.o
+ .data.green    0x00000000        0x1 build/default/production/main.o
+ .data.red      0x00000000        0x1 build/default/production/main.o
+ .data.blue     0x00000000        0x1 build/default/production/main.o
  .text          0x00000000        0x0 build/default/production/RAGMARtos.o
  .data          0x00000000        0x0 build/default/production/RAGMARtos.o
  .bss           0x00000000        0x0 build/default/production/RAGMARtos.o
@@ -34,6 +46,8 @@ Discarded input sections
                 0x00000000       0x32 build/default/production/RAGMARtos.o
  .text.set_process_ready
                 0x00000000       0x30 build/default/production/RAGMARtos.o
+ .text.kernell_add_process
+                0x00000000       0x56 build/default/production/RAGMARtos.o
  .text          0x00000000        0x0 build/default/production/DriverController.o
  .data          0x00000000        0x0 build/default/production/DriverController.o
  .bss           0x00000000        0x0 build/default/production/DriverController.o
@@ -94,6 +108,8 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
 
 Memory Configuration
 
@@ -110,7 +126,7 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 Address of section .data set to 0x800100
-LOAD C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+LOAD C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD build/default/production/main.o
 LOAD build/default/production/RAGMARtos.o
 LOAD build/default/production/DriverController.o
@@ -125,7 +141,7 @@ START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a
-LOAD C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5\libatmega328p.a
+LOAD C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5\libatmega328p.a
 END GROUP
                 0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
                 [0x00800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
@@ -227,9 +243,9 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x5bc
+.text           0x00000000      0x742
  *(.vectors)
- .vectors       0x00000000       0x68 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .vectors       0x00000000       0x68 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
@@ -257,13 +273,13 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000068        0x0 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init0         0x00000068        0x0 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000068                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000068        0xc C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init2         0x00000068        0xc C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
@@ -282,10 +298,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000009a        0x8 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x0000009a        0x8 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x000000a2        0x4 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .text          0x000000a2        0x4 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x000000a2                __vector_22
                 0x000000a2                __vector_1
                 0x000000a2                __vector_24
@@ -312,90 +328,92 @@ END GROUP
                 0x000000a2                __vector_20
                 0x000000a6                . = ALIGN (0x2)
  *(.text.*)
- .text.blink    0x000000a6        0xc build/default/production/main.o
-                0x000000a6                blink
- .text.main     0x000000b2       0xa8 build/default/production/main.o
-                0x000000b2                main
+ .text.main     0x000000a6       0x3c build/default/production/main.o
+                0x000000a6                main
  .text.load_kernell
-                0x0000015a       0x76 build/default/production/RAGMARtos.o
-                0x0000015a                load_kernell
+                0x000000e2       0x48 build/default/production/RAGMARtos.o
+                0x000000e2                load_kernell
  .text.scheduler_process_selection
-                0x000001d0       0x72 build/default/production/RAGMARtos.o
-                0x000001d0                scheduler_process_selection
+                0x0000012a       0x72 build/default/production/RAGMARtos.o
+                0x0000012a                scheduler_process_selection
  .text.schedule_decrement_time
-                0x00000242       0x48 build/default/production/RAGMARtos.o
-                0x00000242                schedule_decrement_time
+                0x0000019c       0x48 build/default/production/RAGMARtos.o
+                0x0000019c                schedule_decrement_time
  .text.create_kernell
-                0x0000028a       0x14 build/default/production/RAGMARtos.o
-                0x0000028a                create_kernell
- .text.kernell_add_process
-                0x0000029e       0x56 build/default/production/RAGMARtos.o
-                0x0000029e                kernell_add_process
+                0x000001e4       0x14 build/default/production/RAGMARtos.o
+                0x000001e4                create_kernell
  .text.kernell_init
-                0x000002f4       0x40 build/default/production/RAGMARtos.o
-                0x000002f4                kernell_init
+                0x000001f8       0x40 build/default/production/RAGMARtos.o
+                0x000001f8                kernell_init
  .text.__vector_14
-                0x00000334       0x48 build/default/production/RAGMARtos.o
-                0x00000334                __vector_14
+                0x00000238       0x48 build/default/production/RAGMARtos.o
+                0x00000238                __vector_14
  .text.load_controller
-                0x0000037c       0x26 build/default/production/DriverController.o
-                0x0000037c                load_controller
+                0x00000280       0x26 build/default/production/DriverController.o
+                0x00000280                load_controller
  .text.init_driver
-                0x000003a2       0x1e build/default/production/DriverController.o
-                0x000003a2                init_driver
+                0x000002a6       0x1e build/default/production/DriverController.o
+                0x000002a6                init_driver
  .text.call_driver
-                0x000003c0       0x32 build/default/production/DriverController.o
-                0x000003c0                call_driver
+                0x000002c4       0x32 build/default/production/DriverController.o
+                0x000002c4                call_driver
  .text.led_init
-                0x000003f2        0xe build/default/production/DriverLed.o
-                0x000003f2                led_init
- .text.led_on   0x00000400        0xe build/default/production/DriverLed.o
-                0x00000400                led_on
- .text.led_off  0x0000040e       0x10 build/default/production/DriverLed.o
-                0x0000040e                led_off
+                0x000002f6        0xe build/default/production/DriverLed.o
+                0x000002f6                led_init
+ .text.led_on   0x00000304        0xe build/default/production/DriverLed.o
+                0x00000304                led_on
+ .text.led_off  0x00000312       0x10 build/default/production/DriverLed.o
+                0x00000312                led_off
  .text.led_toggle
-                0x0000041e        0xe build/default/production/DriverLed.o
-                0x0000041e                led_toggle
+                0x00000322        0xe build/default/production/DriverLed.o
+                0x00000322                led_toggle
  .text.get_led_driver
-                0x0000042c       0x36 build/default/production/DriverLed.o
-                0x0000042c                get_led_driver
+                0x00000330       0x36 build/default/production/DriverLed.o
+                0x00000330                get_led_driver
  .text.format_data
-                0x00000462        0xc build/default/production/DriverLCD.o
-                0x00000462                format_data
- .text.send     0x0000046e       0x12 build/default/production/DriverLCD.o
-                0x0000046e                send
- .text.function_set
-                0x00000480       0x20 build/default/production/DriverLCD.o
-                0x00000480                function_set
+                0x00000366        0xc build/default/production/DriverLCD.o
+                0x00000366                format_data
+ .text.send     0x00000372       0x12 build/default/production/DriverLCD.o
+                0x00000372                send
  .text.display_setup_item
-                0x000004a0       0x1c build/default/production/DriverLCD.o
-                0x000004a0                display_setup_item
+                0x00000384       0x1e build/default/production/DriverLCD.o
+                0x00000384                display_setup_item
+ .text.print_char
+                0x000003a2       0x28 build/default/production/DriverLCD.o
+                0x000003a2                print_char
+ .text.function_set
+                0x000003ca       0x20 build/default/production/DriverLCD.o
+                0x000003ca                function_set
  .text.LCD_init
-                0x000004bc       0x18 build/default/production/DriverLCD.o
-                0x000004bc                LCD_init
+                0x000003ea       0x18 build/default/production/DriverLCD.o
+                0x000003ea                LCD_init
  .text.get_lcd_driver
-                0x000004d4       0x18 build/default/production/DriverLCD.o
-                0x000004d4                get_lcd_driver
+                0x00000402       0x2e build/default/production/DriverLCD.o
+                0x00000402                get_lcd_driver
  .text.counter16_init
-                0x000004ec       0x2e build/default/production/DriverCounter16.o
-                0x000004ec                counter16_init
+                0x00000430       0x2e build/default/production/DriverCounter16.o
+                0x00000430                counter16_init
  .text.set_ISR_thread
-                0x0000051a        0xc build/default/production/DriverCounter16.o
-                0x0000051a                set_ISR_thread
+                0x0000045e        0xc build/default/production/DriverCounter16.o
+                0x0000045e                set_ISR_thread
  .text.set_ISR_thread_param
-                0x00000526        0xc build/default/production/DriverCounter16.o
-                0x00000526                set_ISR_thread_param
+                0x0000046a        0xc build/default/production/DriverCounter16.o
+                0x0000046a                set_ISR_thread_param
  .text.get_counter16_driver
-                0x00000532       0x2e build/default/production/DriverCounter16.o
-                0x00000532                get_counter16_driver
+                0x00000476       0x2e build/default/production/DriverCounter16.o
+                0x00000476                get_counter16_driver
  .text.__vector_11
-                0x00000560       0x58 build/default/production/DriverCounter16.o
-                0x00000560                __vector_11
-                0x000005b8                . = ALIGN (0x2)
+                0x000004a4       0x58 build/default/production/DriverCounter16.o
+                0x000004a4                __vector_11
+ .text.avr-libc
+                0x000004fc      0x242 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x000004fc                malloc
+                0x0000062c                free
+                0x0000073e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000005b8        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000005b8                _exit
-                0x000005b8                exit
+ .fini9         0x0000073e        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000073e                _exit
+                0x0000073e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -414,34 +432,27 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000005b8        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000073e        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000005bc                _etext = .
+                0x00000742                _etext = .
 
-.data           0x00800100        0x6 load address 0x000005bc
+.data           0x00800100        0x6 load address 0x00000742
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
+ .data          0x00800100        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800100                __malloc_heap_end
+                0x00800102                __malloc_heap_start
+                0x00800104                __malloc_margin
  *(.data*)
- .data.purple   0x00800100        0x1 build/default/production/main.o
-                0x00800100                purple
- .data.yellow   0x00800101        0x1 build/default/production/main.o
-                0x00800101                yellow
- .data.green    0x00800102        0x1 build/default/production/main.o
-                0x00800102                green
- .data.red      0x00800103        0x1 build/default/production/main.o
-                0x00800103                red
- .data.blue     0x00800104        0x1 build/default/production/main.o
-                0x00800104                blue
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
                 0x00800106                . = ALIGN (0x2)
- *fill*         0x00800105        0x1 
                 0x00800106                _edata = .
                 0x00800106                PROVIDE (__data_end, .)
 
-.bss            0x00800106       0x23
+.bss            0x00800106       0x31
                 0x00800106                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
@@ -449,28 +460,34 @@ END GROUP
                 0x00800106        0x1 build/default/production/RAGMARtos.o
                 0x00800106                kernell_created
  *(COMMON)
- COMMON         0x00800107        0x6 build/default/production/RAGMARtos.o
+ COMMON         0x00800107        0x8 build/default/production/RAGMARtos.o
                 0x00800107                kernell
- COMMON         0x0080010d        0x6 build/default/production/DriverController.o
-                0x0080010d                drvrs_list
- COMMON         0x00800113        0xa build/default/production/DriverLed.o
-                0x00800113                drvr_led
-                0x00800117                list_methods
- COMMON         0x0080011d        0x4 build/default/production/DriverLCD.o
-                0x0080011d                drvr_lcd
- COMMON         0x00800121        0x8 build/default/production/DriverCounter16.o
-                0x00800121                counter16
-                0x00800125                job
-                0x00800129                PROVIDE (__bss_end, .)
-                0x000005bc                __data_load_start = LOADADDR (.data)
-                0x000005c2                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080010d                buffer
+ COMMON         0x0080010f        0x6 build/default/production/DriverController.o
+                0x0080010f                drvrs_list
+ COMMON         0x00800115        0xa build/default/production/DriverLed.o
+                0x00800115                drvr_led
+                0x00800119                list_LED
+ COMMON         0x0080011f        0x8 build/default/production/DriverLCD.o
+                0x0080011f                drvr_lcd
+                0x00800123                list_LCD
+ COMMON         0x00800127        0xc build/default/production/DriverCounter16.o
+                0x00800127                counter16
+                0x0080012b                list_COUNTER16
+                0x0080012f                job
+ COMMON         0x00800133        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800133                __brkval
+                0x00800135                __flp
+                0x00800137                PROVIDE (__bss_end, .)
+                0x00000742                __data_load_start = LOADADDR (.data)
+                0x00000748                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800129        0x0
+.noinit         0x00800137        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800129                _end = .
-                [!provide]                PROVIDE (__heap_start, .)
+                0x00800137                _end = .
+                0x00800137                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -518,11 +535,12 @@ END GROUP
  .comment       0x00000030       0x31 build/default/production/DriverLed.o
  .comment       0x00000030       0x31 build/default/production/DriverLCD.o
  .comment       0x00000030       0x31 build/default/production/DriverCounter16.o
+ .comment       0x00000030       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
  .note.gnu.avr.deviceinfo
-                0x00000000       0x40 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00000000       0x40 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -547,22 +565,22 @@ END GROUP
 
 .debug_info     0x00000000      0x5f4
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_info    0x00000000      0x5f4 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
 
 .debug_abbrev   0x00000000      0x5a2
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_abbrev  0x00000000      0x5a2 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
 
 .debug_line     0x00000000      0x133
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x133 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_line    0x00000000      0x133 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
 
 .debug_frame
  *(.debug_frame)
 
 .debug_str      0x00000000      0x208
  *(.debug_str)
- .debug_str     0x00000000      0x208 C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_str     0x00000000      0x208 C:/Users/Estudo/.mchp_packs/Microchip/ATmega_DFP/2.0.2/gcc/dev/atmega328p/avr5/crtatmega328p.o
 
 .debug_loc
  *(.debug_loc)
