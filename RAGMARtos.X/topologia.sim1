@@ -1,7 +1,7 @@
 <circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
 <item itemtype="Subcircuit" CircId="Nano-11" mainComp="false" Show_id="true" Show_Val="false" Pos="-140,64" rotation="0" hflip="-1" vflip="-1" label="Nano-11" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
-<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" Program="dist/default/production/RAGMARtos.X.production.hex" Auto_Load="false" saveEepr="true" varList="PORTB,PINB,PINC,DDRB,TCCR1A,OCR1AL,TCNT1L" MainMcu="true" SerialMon="-1" />
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" Program="dist/default/production/RAGMARtos.X.production.hex" Auto_Load="false" saveEepr="true" varList="ADCSRA,DDRC,ADCSRA,ADCL,ADCH" MainMcu="true" SerialMon="-1" />
 </item>
 
 <item itemtype="Led" CircId="Led-12" mainComp="false" Show_id="false" Show_Val="false" Pos="-44,-32" rotation="0" hflip="1" vflip="1" label="Led-12" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Blue" Grounded="false" Threshold="0 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
@@ -32,8 +32,6 @@
 
 <item itemtype="Resistor" CircId="Resistor-40" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-232,24" rotation="90" hflip="1" vflip="1" label="Resistor-40" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="1 kΩ" />
 
-<item itemtype="Resistor" CircId="Resistor-43" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-216,24" rotation="90" hflip="1" vflip="1" label="Resistor-43" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="1 kΩ" />
-
 <item itemtype="Capacitor" CircId="Capacitor-46" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-284,20" rotation="90" hflip="1" vflip="1" label="Capacitor-46" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Capacitance="100 nF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
 
 <item itemtype="Capacitor" CircId="Capacitor-49" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-260,20" rotation="90" hflip="1" vflip="1" label="Capacitor-49" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Capacitance="100 nF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
@@ -50,25 +48,19 @@
 
 <item itemtype="Capacitor" CircId="Capacitor-69" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-84,60" rotation="90" hflip="1" vflip="1" label="Capacitor-69" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Capacitance="100 nF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
 
+<item itemtype="Voltage Source" CircId="Voltage Source-72" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-336,-220" rotation="0" hflip="1" vflip="1" label="Voltage Source-72" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="4.965 V" MaxValue="5 V" MinValue="0 V" />
+
 <item itemtype="Node" CircId="Node-17" mainComp="false" Pos="-12,-32" />
 
 <item itemtype="Node" CircId="Node-32" mainComp="false" Pos="-12,-56" />
 
 <item itemtype="Node" CircId="Node-35" mainComp="false" Pos="-12,-84" />
 
-<item itemtype="Node" CircId="Node-41" mainComp="false" Pos="-232,-32" />
-
 <item itemtype="Node" CircId="Node-42" mainComp="false" Pos="-12,92" />
-
-<item itemtype="Node" CircId="Node-44" mainComp="false" Pos="-216,-40" />
-
-<item itemtype="Node" CircId="Node-45" mainComp="false" Pos="-216,92" />
 
 <item itemtype="Node" CircId="Node-47" mainComp="false" Pos="-284,-64" />
 
 <item itemtype="Node" CircId="Node-48" mainComp="false" Pos="-232,92" />
-
-<item itemtype="Node" CircId="Node-50" mainComp="false" Pos="-260,-104" />
 
 <item itemtype="Node" CircId="Node-51" mainComp="false" Pos="-260,92" />
 
@@ -90,6 +82,8 @@
 
 <item itemtype="Node" CircId="Node-71" mainComp="false" Pos="-84,92" />
 
+<item itemtype="Node" CircId="Node-41" mainComp="false" Pos="-232,-32" />
+
 <item itemtype="Connector" uid="Connector-60" startpinid="Resistor-30-rPin" endpinid="Led-31-lPin" pointList="-72,-84,-60,-84" />
 
 <item itemtype="Connector" uid="Connector-64" startpinid="Node-32-2" endpinid="Node-17-1" pointList="-12,-56,-12,-32" />
@@ -104,35 +98,15 @@
 
 <item itemtype="Connector" uid="Connector-70" startpinid="Nano-11-11" endpinid="Resistor-33-lPin" pointList="-148,-56,-124,-56,-124,-112,-104,-112" />
 
-<item itemtype="Connector" uid="Connector-81" startpinid="Resistor-40-lPin" endpinid="Node-41-1" pointList="-232,8,-232,-32" />
-
-<item itemtype="Connector" uid="Connector-83" startpinid="Node-41-2" endpinid="Nano-11-A1" pointList="-232,-32,-196,-32" />
-
 <item itemtype="Connector" uid="Connector-85" startpinid="Ground-16-Gnd" endpinid="Node-42-0" pointList="-12,104,-12,92" />
 
 <item itemtype="Connector" uid="Connector-86" startpinid="Node-42-2" endpinid="Node-17-0" pointList="-12,92,-12,-32" />
-
-<item itemtype="Connector" uid="Connector-87" startpinid="Resistor-43-lPin" endpinid="Node-44-1" pointList="-216,8,-216,-40" />
-
-<item itemtype="Connector" uid="Connector-89" startpinid="Node-44-2" endpinid="Nano-11-A0" pointList="-216,-40,-196,-40" />
-
-<item itemtype="Connector" uid="Connector-90" startpinid="Resistor-43-rPin" endpinid="Node-45-1" pointList="-216,40,-216,92" />
 
 <item itemtype="Connector" uid="Connector-93" startpinid="Capacitor-46-lPin" endpinid="Node-47-1" pointList="-284,4,-284,-64" />
 
 <item itemtype="Connector" uid="Connector-94" startpinid="Push-39-switch0pinN" endpinid="Node-47-0" pointList="-320,-64,-284,-64" />
 
-<item itemtype="Connector" uid="Connector-95" startpinid="Node-47-2" endpinid="Node-41-0" pointList="-284,-64,-232,-64,-232,-32" />
-
 <item itemtype="Connector" uid="Connector-97" startpinid="Resistor-40-rPin" endpinid="Node-48-0" pointList="-232,40,-232,92" />
-
-<item itemtype="Connector" uid="Connector-98" startpinid="Node-48-2" endpinid="Node-45-0" pointList="-232,92,-216,92" />
-
-<item itemtype="Connector" uid="Connector-99" startpinid="Capacitor-49-lPin" endpinid="Node-50-1" pointList="-260,4,-260,-104" />
-
-<item itemtype="Connector" uid="Connector-100" startpinid="Push-38-switch0pinN" endpinid="Node-50-0" pointList="-320,-104,-260,-104" />
-
-<item itemtype="Connector" uid="Connector-101" startpinid="Node-50-2" endpinid="Node-44-0" pointList="-260,-104,-224,-104,-224,-40,-216,-40" />
 
 <item itemtype="Connector" uid="Connector-102" startpinid="Capacitor-49-rPin" endpinid="Node-51-1" pointList="-260,36,-260,92" />
 
@@ -186,8 +160,6 @@
 
 <item itemtype="Connector" uid="Connector-145" startpinid="Resistor-66-rPin" endpinid="Node-68-1" pointList="-100,76,-100,92" />
 
-<item itemtype="Connector" uid="Connector-146" startpinid="Node-45-2" endpinid="Node-68-0" pointList="-216,92,-100,92" />
-
 <item itemtype="Connector" uid="Connector-148" startpinid="Capacitor-69-lPin" endpinid="Node-70-1" pointList="-84,44,-84,16" />
 
 <item itemtype="Connector" uid="Connector-149" startpinid="Push-64-pinP0" endpinid="Node-70-0" pointList="-80,16,-84,16" />
@@ -199,5 +171,17 @@
 <item itemtype="Connector" uid="Connector-152" startpinid="Node-68-2" endpinid="Node-71-0" pointList="-100,92,-84,92" />
 
 <item itemtype="Connector" uid="Connector-153" startpinid="Node-71-2" endpinid="Node-42-1" pointList="-84,92,-12,92" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Node-47-2" endpinid="Node-41-0" pointList="-284,-64,-232,-64,-232,-32" />
+
+<item itemtype="Connector" uid="Connector-83" startpinid="Node-41-2" endpinid="Nano-11-A1" pointList="-232,-32,-196,-32" />
+
+<item itemtype="Connector" uid="Connector-81" startpinid="Resistor-40-lPin" endpinid="Node-41-1" pointList="-232,8,-232,-32" />
+
+<item itemtype="Connector" uid="Connector-155" startpinid="Push-38-switch0pinN" endpinid="Capacitor-49-lPin" pointList="-320,-104,-260,-104,-260,4" />
+
+<item itemtype="Connector" uid="Connector-160" startpinid="Voltage Source-72-outPin" endpinid="Nano-11-A0" pointList="-308,-204,-216,-204,-216,-40,-196,-40" />
+
+<item itemtype="Connector" uid="Connector-161" startpinid="Node-48-2" endpinid="Node-68-0" pointList="-232,92,-100,92" />
 
 </circuit>

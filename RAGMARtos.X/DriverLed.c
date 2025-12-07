@@ -3,7 +3,7 @@
 
 
 driver drvr_led;
-procedure list_LED[END];
+procedure list_LED[END_LED];
 
 
 uint8_t led_init(void* param){

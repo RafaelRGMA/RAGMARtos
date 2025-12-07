@@ -7,7 +7,7 @@
 <item itemtype="Voltage Source" CircId="Voltage Source-29" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-472,-32" rotation="0" hflip="1" vflip="1" label="Voltage Source-29" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="2.04541 V" MaxValue="5.001 V" MinValue="0 V" />
 
 <item itemtype="Subcircuit" CircId="Nano-30" mainComp="false" Show_id="true" Show_Val="false" Pos="-180,20" rotation="0" hflip="-1" vflip="-1" label="Nano-30" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
-<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" Program="dist/default/production/DisplayLIB.X.production.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" Program="dist/default/production/RAGMARtos.X.production.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
 <item itemtype="Connector" uid="Connector-60" startpinid="Ground-22-Gnd" endpinid="Hd44780-1-PinRW" pointList="-100,32,-100,-140" />

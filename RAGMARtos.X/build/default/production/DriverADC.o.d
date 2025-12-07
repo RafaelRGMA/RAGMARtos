@@ -1,5 +1,6 @@
-build/default/production/main.o.d build/default/production/main.o: main.c \
- RAGMARtos.h GlobalIncludes.h \
+build/default/production/DriverADC.o.d \
+ build/default/production/DriverADC.o: DriverADC.c DriverADC.h \
+ Diver_template.h GlobalIncludes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -17,11 +18,11 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- Driver_controller.h Diver_template.h DriverLed.h DriverLCD.h \
- DriverCounter16.h DriverADC.h
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h
 
-RAGMARtos.h:
+DriverADC.h:
+
+Diver_template.h:
 
 GlobalIncludes.h:
 
@@ -60,15 +61,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h:
-
-Driver_controller.h:
-
-Diver_template.h:
-
-DriverLed.h:
-
-DriverLCD.h:
-
-DriverCounter16.h:
-
-DriverADC.h:

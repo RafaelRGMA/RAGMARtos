@@ -3,7 +3,7 @@
 
 #include "Diver_template.h"
 
-enum {LED_ON, LED_OFF, LED_TOGGLE, END};
+enum {LED_ON, LED_OFF, LED_TOGGLE, END_LED};
 
 driver* get_led_driver();
 #endif
