@@ -24,10 +24,6 @@ void send(){
 void function_set(){
     uint8_t raw_data = 0b00101100;
     PORTB &= ~RS;
-    /*
-     * Inverte-se a palavra do dado para enviar o nibble mais significativo
-     * pelo nibble menos significativo da porta de dados
-     */
     PORTB = format_data((raw_data<<4)|(raw_data>>4));
     send();
     send();
@@ -35,14 +31,9 @@ void function_set(){
     send();
 }
 
-uint8_t display_setup_item(){
-    uint8_t raw_data = 0b00001111;
+uint8_t display_setup_item(void* config_byte){
+    uint8_t raw_data = *((uint8_t*)config_byte);
     PORTB &= ~RS;
-    
-      /*
-     * Inverte-se a palavra do dado para enviar o nibble mais significativo
-     * pelo nibble menos significativo da porta de dados
-     */
     PORTB = format_data((raw_data<<4)|(raw_data>>4));
     send();
     PORTB = format_data(raw_data);
@@ -53,10 +44,6 @@ uint8_t display_setup_item(){
 uint8_t print_char(void* byte){
     uint8_t raw_data = *((uint8_t*)byte);
     PORTB |= RS;
-      /*
-     * Inverte-se a palavra do dado para enviar o nibble mais significativo
-     * pelo nibble menos significativo da porta de dados
-     */
     PORTB = format_data((raw_data<<4)|(raw_data>>4));
     send();
     PORTB = format_data(raw_data);
@@ -65,14 +52,12 @@ uint8_t print_char(void* byte){
 }
 
 
-
-uint8_t LCD_init(){
+uint8_t LCD_init(void* param){
+    uint8_t display_on = 0b00001111;
     DDRB |= 0b00111111;
     PORTB &= 0b1100000;
-    
     function_set();
-    //Display ON/OFF
-    display_setup_item();
+    display_setup_item(&display_on);
     return 0;
 }
 
