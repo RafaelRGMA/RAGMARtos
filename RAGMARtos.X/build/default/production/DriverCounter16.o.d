@@ -19,7 +19,8 @@ build/default/production/DriverCounter16.o.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
- RAGMARtos.h Driver_controller.h DriverLed.h DriverLCD.h DriverADC.h
+ RAGMARtos.h Driver_controller.h DriverLed.h DriverLCD.h DriverADC.h \
+ DriverEEPROM.h
 
 DriverCounter16.h:
 
@@ -72,3 +73,5 @@ DriverLed.h:
 DriverLCD.h:
 
 DriverADC.h:
+
+DriverEEPROM.h:

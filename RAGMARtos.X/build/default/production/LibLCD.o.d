@@ -19,7 +19,7 @@ build/default/production/LibLCD.o.d build/default/production/LibLCD.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  RAGMARtos.h Driver_controller.h DriverLed.h DriverCounter16.h \
- DriverADC.h
+ DriverADC.h DriverEEPROM.h
 
 LibLCD.h:
 
@@ -74,3 +74,5 @@ DriverLed.h:
 DriverCounter16.h:
 
 DriverADC.h:
+
+DriverEEPROM.h:

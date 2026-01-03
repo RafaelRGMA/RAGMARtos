@@ -20,7 +20,7 @@ build/default/production/RAGMARtos.o.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  Driver_controller.h Diver_template.h DriverLed.h DriverLCD.h \
- DriverCounter16.h DriverADC.h
+ DriverCounter16.h DriverADC.h DriverEEPROM.h
 
 RAGMARtos.h:
 
@@ -73,3 +73,5 @@ DriverLCD.h:
 DriverCounter16.h:
 
 DriverADC.h:
+
+DriverEEPROM.h:

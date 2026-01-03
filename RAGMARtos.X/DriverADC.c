@@ -1,7 +1,5 @@
 #include "DriverADC.h"
 
-
-
 driver drvr_adc;
 procedure list_ADC[END_ADC];
 

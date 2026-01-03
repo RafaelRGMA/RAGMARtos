@@ -8,6 +8,7 @@ void load_controller(){
     drvrs_list[DRVR_LCD] = get_lcd_driver();
     drvrs_list[DRVR_COUNTER16] = get_counter16_driver();
     drvrs_list[DRVR_ADC] = get_ADC_driver();
+    drvrs_list[DRVR_EEPROM] = get_eeprom_driver();
 }
 
 uint8_t init_driver(uint8_t id, void* params){
