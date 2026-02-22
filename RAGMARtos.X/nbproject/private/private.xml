@@ -4,9 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/main.c</file>
-            <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/DriverADC.c</file>
-            <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/DriverADC.h</file>
-            <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/DriverController.c</file>
+            <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/RAGMARtos.c</file>
+            <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/RAGMARtos.h</file>
+            <file>file:/C:/Users/rafae/Documents/AVR/Projetos_AVR/RAGMARtos/RAGMARtos.X/LibLCD.h</file>
         </group>
     </open-files>
 </project-private>

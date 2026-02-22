@@ -19,13 +19,13 @@ list_ADC            0x2               build/default/production/DriverADC.o
 drvr_eeprom         0x4               build/default/production/DriverEEPROM.o
 drvr_led            0x4               build/default/production/DriverLed.o
 __brkval            0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
-kernell             0x6               build/default/production/RAGMARtos.o
 drvr_lcd            0x4               build/default/production/DriverLCD.o
 counter16           0x4               build/default/production/DriverCounter16.o
 buffer              0x2               build/default/production/RAGMARtos.o
 list_eeprom         0xc               build/default/production/DriverEEPROM.o
 list_LCD            0x4               build/default/production/DriverLCD.o
 list_LED            0x6               build/default/production/DriverLed.o
+kernel              0x6               build/default/production/RAGMARtos.o
 stats               0x3               build/default/production/main.o
 drvrs_list          0xa               build/default/production/DriverController.o
 __flp               0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
@@ -345,24 +345,24 @@ END GROUP
                 0x000000c0                wrt_eeprom
  .text.main     0x000000da       0x96 build/default/production/main.o
                 0x000000da                main
- .text.load_kernell
+ .text.load_kernel
                 0x00000170       0x48 build/default/production/RAGMARtos.o
-                0x00000170                load_kernell
+                0x00000170                load_kernel
  .text.scheduler_process_selection
                 0x000001b8       0x72 build/default/production/RAGMARtos.o
                 0x000001b8                scheduler_process_selection
  .text.schedule_decrement_time
                 0x0000022a       0x48 build/default/production/RAGMARtos.o
                 0x0000022a                schedule_decrement_time
- .text.create_kernell
+ .text.create_kernel
                 0x00000272       0x14 build/default/production/RAGMARtos.o
-                0x00000272                create_kernell
- .text.kernell_add_process
+                0x00000272                create_kernel
+ .text.kernel_add_process
                 0x00000286       0x56 build/default/production/RAGMARtos.o
-                0x00000286                kernell_add_process
- .text.kernell_init
+                0x00000286                kernel_add_process
+ .text.kernel_init
                 0x000002dc       0x40 build/default/production/RAGMARtos.o
-                0x000002dc                kernell_init
+                0x000002dc                kernel_init
  .text.__vector_14
                 0x0000031c       0x48 build/default/production/RAGMARtos.o
                 0x0000031c                __vector_14
@@ -526,15 +526,15 @@ END GROUP
  *(.bss*)
  .bss.contagem  0x00800112        0x1 build/default/production/main.o
                 0x00800112                contagem
- .bss.kernell_created
+ .bss.kernel_created
                 0x00800113        0x1 build/default/production/RAGMARtos.o
-                0x00800113                kernell_created
+                0x00800113                kernel_created
  *(COMMON)
  COMMON         0x00800114        0x3 build/default/production/main.o
                 0x00800114                stats
  COMMON         0x00800117        0x8 build/default/production/RAGMARtos.o
-                0x00800117                kernell
-                0x0080011d                buffer
+                0x00800117                buffer
+                0x00800119                kernel
  COMMON         0x0080011f        0xa build/default/production/DriverController.o
                 0x0080011f                drvrs_list
  COMMON         0x00800129        0xa build/default/production/DriverLed.o

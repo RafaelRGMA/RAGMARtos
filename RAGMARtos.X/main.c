@@ -27,7 +27,7 @@ int main(void){
     stats.mem_address = 0x000F;
     
     
-    create_kernell(2);
+    create_kernel(2);
     init_driver(DRVR_COUNTER16, &maximo);
     init_driver(DRVR_EEPROM, NULL);
     
@@ -35,8 +35,8 @@ int main(void){
     call_driver(DRVR_COUNTER16,ISR_PARAM,NULL);
     lcd_start();
    
-    kernell_add_process(task_print_string, label, 3,25,false);
-    kernell_add_process(wrt_eeprom, NULL, 3, 100, false);
-    kernell_init();
+    kernel_add_process(task_print_string, label, 3,25,false);
+    kernel_add_process(wrt_eeprom, NULL, 3, 100, false);
+    kernel_init();
     return 0;
 }
